@@ -8,13 +8,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "deops Digital Garden",
-    pageTitleSuffix: " | kb.deops.org",
+    pageTitle: "Ops Intelligence Node",
+    pageTitleSuffix: " | kb.opskitpro.com",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "zh-CN",
-    baseUrl: "kb.deops.org",
+    baseUrl: "kb.opskitpro.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

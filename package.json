@@ -1,5 +1,5 @@
 {
-  "name": "@jackyzha0/quartz",
+  "name": "@opskitpro/kb",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "4.5.2",
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
+    "deploy": "npx quartz build && wrangler pages deploy",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",

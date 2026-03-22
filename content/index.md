@@ -1,13 +1,13 @@
 ---
-title: "欢迎来到 deops 数字花园"
+title: "Ops Intelligence Node"
 tags:
   - index
-  - deops
+  - opskitpro
 ---
 
-# 🌱 deops Digital Garden
+# 🧠 Ops Intelligence Node
 
-这里是 **deops** 的数字花园 —— 一个去中心化运维工程师的个人知识树。
+这里是 **OpsKitPro** 的运维智能节点 —— 一个去中心化运维工程师的个人知识树。
 
 > **Deep. Define. Decentralized.**
 
@@ -33,9 +33,9 @@ tags:
 
 | 站点 | 定位 | 地址 |
 |------|------|------|
-| **deops.org** | 工具平台 & 技术博客 | [deops.org](https://deops.org) |
-| **kb.deops.org** | 知识花园 & 深度笔记 | 你正在这里 ✨ |
+| **OpsKitPro.com** | 工具平台 & 技术博客 | [opskitpro.com](https://opskitpro.com) |
+| **kb.opskitpro.com** | 运维智能节点 | 你正在这里 ✨ |
 
 ---
 
-> 这座花园永远在生长。每一篇笔记都是一颗种子。🌿
+> 这个节点永远在保持同步与迭代。🌿
