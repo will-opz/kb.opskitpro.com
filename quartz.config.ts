@@ -8,44 +8,43 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Ops Intelligence Node",
-    pageTitleSuffix: " | kb.opskitpro.com",
+    pageTitle: "OpsKitPro | 运维取证智库",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "zh-CN",
     baseUrl: "kb.opskitpro.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Inter",
+        header: "Outfit",
         body: "Inter",
         code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#fafafa",
-          lightgray: "#e4e4e7",
-          gray: "#a1a1aa",
-          darkgray: "#3f3f46",
+          light: "#fcfcfc",
+          lightgray: "#f4f4f5",
+          gray: "#d4d4d8",
+          darkgray: "#52525b",
           dark: "#18181b",
-          secondary: "#059669",
-          tertiary: "#34d399",
-          highlight: "rgba(16, 185, 129, 0.08)",
+          secondary: "#10b981",
+          tertiary: "#059669",
+          highlight: "rgba(16, 185, 129, 0.05)",
           textHighlight: "#d1fae588",
         },
         darkMode: {
-          light: "#0a0a0a",
-          lightgray: "#27272a",
-          gray: "#52525b",
-          darkgray: "#d4d4d8",
-          dark: "#fafafa",
-          secondary: "#34d399",
-          tertiary: "#6ee7b7",
-          highlight: "rgba(16, 185, 129, 0.12)",
+          light: "#09090b",
+          lightgray: "#18181b",
+          gray: "#3f3f46",
+          darkgray: "#a1a1aa",
+          dark: "#f4f4f5",
+          secondary: "#10b981",
+          tertiary: "#34d399",
+          highlight: "rgba(16, 185, 129, 0.15)",
           textHighlight: "#065f4688",
         },
       },
@@ -55,7 +54,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "git", "filesystem"],
+        priority: ["frontmatter", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {
@@ -84,10 +83,7 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
     ],
   },
 }

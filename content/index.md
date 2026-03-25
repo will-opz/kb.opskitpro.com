@@ -1,41 +1,32 @@
 ---
-title: "Ops Intelligence Node"
-tags:
-  - index
-  - opskitpro
+title: "OpsKitPro | 运维取证智库 (Field Notes)"
 ---
 
-# 🧠 Ops Intelligence Node
+# 🛰️ OpsKitPro 运维取证智库
 
-这里是 **OpsKitPro** 的运维智能节点 —— 一个去中心化运维工程师的个人知识树。
-
-> **Deep. Define. Decentralized.**
-
-## 关于这个知识库
-
-这座花园使用 [Obsidian](https://obsidian.md) 作为日常写作引擎，通过 [Quartz](https://quartz.jzhao.xyz/) 将本地的 Markdown 笔记一键发布为可交互的在线知识图谱。
-
-你可以在这里找到：
-
-- 🛡️ **网络安全笔记** — 渗透测试、威胁情报、零信任架构
-- ☁️ **云原生实战** — Kubernetes、Terraform、容器安全
-- 🧠 **AI 工程手册** — LLM 集成、Prompt Engineering、自动化工作流
-- ⚡ **SRE 急救箱** — 事故复盘、性能调优、监控告警
-- 📖 **读书笔记 & 技术随想**
-
-## 快速导航
-
-- [[网络安全]] — 安全领域的知识地图
-- [[云原生]] — 容器与编排的实战笔记
-- [[AI 工程]] — 大语言模型与自动化
-
-## 与主站的关系
-
-| 站点 | 定位 | 地址 |
-|------|------|------|
-| **OpsKitPro.com** | 工具平台 & 技术博客 | [opskitpro.com](https://opskitpro.com) |
-| **kb.opskitpro.com** | 运维智能节点 | 你正在这里 ✨ |
+欢迎来到 **OpsKitPro** 的核心知识节点。这里沉淀了我们在全球边缘网络（Edge）中积累的排障经验、取证方法论以及工业级运维实践。
 
 ---
 
-> 这个节点永远在保持同步与迭代。🌿
+## 🛠️ 核心工具手册 (Actionable Guides)
+在 [03_Tools](03_Tools) 中记录了我们全套诊断工具的深度使用教程：
+- [[website-check|网站诊断教程]]
+- [[ip-lookup|IP 深度取证教程]]
+- [[dns-lookup|DNS 解析助手教程]]
+
+---
+
+## 📚 技术情报笔记 (Field Intel)
+在 [02_Articles](02_Articles) 下查看最新的 SRE 实战文章：
+- [[website-not-loading-fix|网站打不开？5 步排查法]]
+- [[ip-lookup-tool-guide|IP 地理位置与 ASN 取证]]
+- [[understanding-dns-records|DNS 记录类型深度指南]]
+
+---
+
+## 🧩 智库架构 (Vault Structure)
+- **`00_Inbox`**：最原始的报错现场记录（SRE Drafts）。
+- **`01_Notes`**：初步归纳的技术方案。
+- **`04_Templates`**：为了保证产出质量预设的 Markdown 模板。
+
+> 💡 **Tip**：你可以通过顶部的 `Search` (Ctrl + K) 开始全文检索。所有的笔记均采用全小写 Kebab-case 命名，以优化 SEO。
