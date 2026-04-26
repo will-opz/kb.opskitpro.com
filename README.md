@@ -1,17 +1,18 @@
-# Quartz v4
+# OpsKitPro KB（已归档）
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+这个本地仓库已经完成拆分，**不再作为主工作区使用**。
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+## 现在请使用
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+- 公开发布仓库：`https://github.com/will-opz/opskitpro-public`
+- 私有工作仓库：`https://github.com/will-opz/opskitpro-notes`
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## 旧仓库的状态
 
-## Sponsors
+- 这是拆分前的混合仓库本地归档副本
+- 仅用于历史参考，不建议继续在这里编辑
+- 以后新增内容请直接写到对应的新仓库
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## 历史说明
+
+如果你还想查看 Quartz 旧结构、迁移前目录或旧配置，可以在这里参考；但不要再把它当作发布入口。
