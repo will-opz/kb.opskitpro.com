@@ -1,0 +1,68 @@
+name: Deploy KB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      BUILD_DIR: public
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Quartz
+        run: npx quartz build
+
+      - name: Package site
+        run: |
+          test -d "$BUILD_DIR"
+          tar -C "$BUILD_DIR" -czf kb-dist.tar.gz .
+
+      - name: Upload package
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+          source: "kb-dist.tar.gz"
+          target: "/tmp"
+
+      - name: Deploy on Lightsail
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+          script: |
+            set -euo pipefail
+
+            BASE="/var/www/kb.opskitpro.com"
+            RELEASE="${{ github.sha }}"
+            RELEASE_DIR="$BASE/releases/$RELEASE"
+
+            mkdir -p "$RELEASE_DIR"
+
+            tar -xzf /tmp/kb-dist.tar.gz -C "$RELEASE_DIR"
+
+            ln -sfn "releases/$RELEASE" "$BASE/current"
+
+            chmod -R 755 "$BASE"
+
+            rm -f /tmp/kb-dist.tar.gz
+
+            cd "$BASE/releases"
+            ls -1dt */ 2>/dev/null | tail -n +6 | xargs -r rm -rf
